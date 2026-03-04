@@ -1,0 +1,88 @@
+List → String
+🔹 Case 1: List of characters
+lst = ['h', 'e', 'l', 'l', 'o']
+s = "".join(lst)
+print(s)
+
+Output:
+
+hello
+
+👉 join() is the correct way.
+
+🔹 Case 2: List of strings (words)
+lst = ["I", "love", "DSA"]
+s = " ".join(lst)
+print(s)
+
+Output:
+
+I love DSA
+
+Notice:
+
+"".join() → no space
+
+" ".join() → space between words
+
+",".join() → comma separated
+
+🔹 Case 3: List of integers
+
+This will ❌ fail:
+
+lst = [1, 2, 3]
+"".join(lst)  # ERROR
+
+Because join needs strings.
+
+Correct way:
+
+lst = [1, 2, 3]
+s = "".join(map(str, lst))
+print(s)
+
+Output:
+
+123
+
+Or with space:
+
+" ".join(map(str, lst))
+✅ 2️⃣ String → List
+🔹 Case 1: Convert string to list of characters
+s = "hello"
+lst = list(s)
+print(lst)
+
+Output:
+
+['h', 'e', 'l', 'l', 'o']
+🔹 Case 2: Split words into list
+s = "I love DSA"
+lst = s.split()
+print(lst)
+
+Output:
+
+['I', 'love', 'DSA']
+
+Default split is space.
+
+You can specify:
+
+s = "1,2,3"
+lst = s.split(",")
+print(lst)
+
+Output:
+
+['1', '2', '3']
+🔹 Case 3: Convert string numbers to int list
+s = "1 2 3"
+lst = list(map(int, s.split()))
+print(lst)
+
+Output:
+
+[1, 2, 3]
