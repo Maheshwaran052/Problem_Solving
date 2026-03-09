@@ -5,14 +5,21 @@
 
 from typing import List
 
-
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashMap = {}
-        needed = 0
         for i in range(len(nums)):
             needed = target - nums[i]
-            if(needed in hashMap):
-                return[hashMap[needed],i]
+            if needed in hashMap:
+                return [hashMap[needed], i]
             hashMap[nums[i]] = i
+
+
+nums = [1,3,4,5,4]
+target = 9
+
+sol = Solution()          # create object
+res = sol.twoSum(nums,target)   # call method
+
+print("RES:", res)
         
