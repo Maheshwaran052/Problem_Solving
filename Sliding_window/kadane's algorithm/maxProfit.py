@@ -1,3 +1,17 @@
+""" Algorithm
+
+Traverse the price array starting from index 1.
+
+Compute the daily difference between current price and previous price.
+
+Add the difference to current_sum.
+
+If current_sum becomes negative, reset it to 0.
+
+Track the maximum profit using max_sum.
+
+Return max_sum after traversal. """
+
 from typing import List
 
 
