@@ -1,3 +1,41 @@
+""" Algorithm
+
+Sort the array so that two-pointer technique can be used and duplicates can be skipped easily.
+
+Traverse the array using index i (first element of triplet).
+
+Skip duplicate values of nums[i] to avoid repeating triplets.
+
+If nums[i] > 0, break because further numbers will also be positive (sum cannot be 0).
+
+Use two pointers:
+
+left = i + 1
+
+right = n - 1
+
+Calculate total = nums[i] + nums[left] + nums[right].
+
+If total == 0
+
+Add the triplet to result.
+
+Skip duplicate values for left and right.
+
+Move both pointers.
+
+If total < 0
+
+Move left forward to increase sum.
+
+If total > 0
+
+Move right backward to decrease sum.
+
+Continue until left < right.
+
+Return all unique triplets. """
+
 from typing import List
 
 
