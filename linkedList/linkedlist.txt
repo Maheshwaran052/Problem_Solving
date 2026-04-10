@@ -1,0 +1,58 @@
+1->2->3->4
+prev = none
+curr = head (1)
+
+iteration 1
+
+nxt = curr.nxt (2)
+curr.nxt = prev (1->none)
+prev = curr (1->none)
+curr = nxt (2->3->4)
+
+iteration 2
+
+nxt = curr.nxt (3)
+curr.nxt = prev (2)
+prev = curr (2->1->none)
+curr = nxt(3->4)
+
+iteration 3
+
+nxt = curr.nxt (4)
+curr.nxt = prev (3)
+prev = curr (3->2->1->none)
+curr = nxt(4)
+
+iteration 4
+
+nxt = curr.nxt (none)
+curr. nxt = prev (4)
+prev = curr (4->3->2->1->none)
+curr = nxt (none)
+
+now exit
+
+
+Core problems
+
+Step 1 (Must-do basics)
+
+Reverse Linked List
+Merge Two Sorted Lists
+Linked List Cycle
+
+Step 2 (Core patterns)
+
+Reorder List
+Remove Nth Node From End
+Find Middle of Linked List (small but important)
+
+Step 3 (Slightly advanced)
+
+Copy List with Random Pointer ⭐ (VERY IMPORTANT)
+Add Two Numbers
+Intersection of Two Linked Lists (add this)
+
+⚠️ Step 4 — Bonus (Optional for now)
+LRU Cache
+Reverse Nodes in K Group
