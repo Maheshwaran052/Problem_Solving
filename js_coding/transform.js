@@ -1,5 +1,10 @@
 function getEligibleNames(users) {
-    return users.filter(user => user.age >= 18).map(user => user.name.toUpperCase());
+    return users.filter(user => user.age >= 18).map(user =>
+    ({
+        ...user,
+        name: user.name.toUpperCase(),
+    })
+    );
 }
 
 const users = [

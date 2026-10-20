@@ -21,7 +21,7 @@ function isPalindrome(str1) {
 function isAlphanumeric(char) {
     const c = char.toLowerCase();
 
-    return (c >= 'a' && c <= 'z') ||
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
         (c >= '0' && c <= '9');
 }
 
