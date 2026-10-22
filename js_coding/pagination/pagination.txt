@@ -1,0 +1,34 @@
+Pagination
+
+Concept 1: slice()
+Suppose you have this array:
+
+const users = [
+    "A", "B", "C", "D", "E",
+    "F", "G", "H", "I", "J"
+];
+
+users.slice(0, 3);
+// ["A", "B", "C"]
+
+users.slice(3, 6);
+// ["D", "E", "F"]
+
+Concept 2: Calculate the correct indexes
+
+const currentPage = 2;
+const pageSize = 3;
+
+startIndex = (currentPage-1) * pageSize
+endIndex = startIndex + pageSize
+
+Concept 3: Calculate the total number of pages
+
+totalPages = totalItems/pageSize
+
+const totalItems = 23;
+const pageSize = 5;
+
+const totalPages = Math.ceil(totalItems / pageSize);
+
+console.log(totalPages); // 5
